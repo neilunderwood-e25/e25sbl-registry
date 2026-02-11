@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Font Sizes */
+  --text-base: 1rem; /* 16px */
+  --text-4xs: 0.5rem; /* 8px */
+  --text-3xs: 0.625rem; /* 10px */
+  --text-xxs: 0.75rem; /* 12px */
+  --text-xs: 0.875rem; /* 14px */
+  --text-sm: 0.9375rem; /* 15px */
+  --text-md: 1.125rem; /* 18px */
+  --text-lg: 1.25rem; /* 20px */
+  --text-xl: 1.375rem; /* 22px */
+  --text-xxl: 1.5rem; /* 24px */
+  --text-3xl: 1.625rem; /* 26px */
+  --text-4xl: 1.75rem; /* 28px */
+  --text-5xl: 1.875rem; /* 30px */
+  --text-6xl: 2rem; /* 32px */
+  --text-7xl: 2.125rem; /* 34px */
+  --text-8xl: 2.25rem; /* 36px */
+  --text-9xl: 2.375rem; /* 38px */
+  --text-10xl: 2.5rem; /* 40px */
+  --text-11xl: 2.625rem; /* 42px */
+  --text-12xl: 2.75rem; /* 44px */
+  --text-13xl: 2.875rem; /* 46px */
+  --text-14xl: 3rem; /* 48px */
+  --text-15xl: 3.125rem; /* 50px */
+  --text-16xl: 3.25rem; /* 52px */
+  --text-17xl: 3.375rem; /* 54px */
+  --text-18xl: 3.5rem; /* 56px */
+  --text-19xl: 3.625rem; /* 58px */
+  --text-20xl: 3.75rem; /* 60px */
+  --text-21xl: 3.875rem; /* 62px */
+  --text-22xl: 4rem; /* 64px */
+  --text-23xl: 4.125rem; /* 66px */
+  --text-24xl: 4.25rem; /* 68px */
+  --text-25xl: 4.375rem; /* 70px */
+  --text-26xl: 4.5rem; /* 72px */
+  --text-27xl: 4.625rem; /* 74px */
+  --text-28xl: 4.75rem; /* 76px */
+  --text-29xl: 4.875rem; /* 78px */
+  --text-30xl: 5rem; /* 80px */
+  --text-31xl: 5.125rem; /* 82px */
+  --text-32xl: 5.25rem; /* 84px */
+  --text-33xl: 5.375rem; /* 86px */
+  --text-34xl: 5.5rem; /* 88px */
+  --text-35xl: 5.625rem; /* 90px */
+  --text-36xl: 5.75rem; /* 92px */
+  --text-37xl: 5.875rem; /* 94px */
+  --text-38xl: 6rem; /* 96px */
+  --text-39xl: 6.125rem; /* 98px */
+  --text-40xl: 6.25rem; /* 100px */
+  --text-41xl: 6.375rem; /* 102px */
+  --text-42xl: 6.5rem; /* 104px */
+  --text-43xl: 6.625rem; /* 106px */
+  --text-44xl: 6.75rem; /* 108px */
+  --text-45xl: 6.875rem; /* 110px */
+  --text-46xl: 7rem; /* 112px */
+  --text-47xl: 7.125rem; /* 114px */
+  --text-48xl: 7.25rem; /* 116px */
+  --text-49xl: 7.375rem; /* 118px */
+
+  /* Line Heights */
+  --leading-base: 1.6; /* 25.6px @ 16px font */
+  --leading-btn: 1.31; /* 20.96px @ 16px font */
+  --leading-xxs: 0.8; /* 12.8px @ 16px font */
+  --leading-xs: 0.9; /* 14.4px @ 16px font */
+  --leading-sm: 1; /* 16px @ 16px font */
+  --leading-md: 1.1; /* 17.6px @ 16px font */
+  --leading-lg: 1.15; /* 18.4px @ 16px font */
+  --leading-xl: 1.2; /* 19.2px @ 16px font */
+  --leading-xxl: 1.25; /* 20px @ 16px font */
+  --leading-3xl: 1.3; /* 20.8px @ 16px font */
+  --leading-4xl: 1.35; /* 21.6px @ 16px font */
+  --leading-5xl: 1.4; /* 22.4px @ 16px font */
+  --leading-6xl: 1.5; /* 24px @ 16px font */
+  --leading-7xl: 1.8; /* 28.8px @ 16px font */
+  --leading-8xl: 1.9; /* 30.4px @ 16px font */
+  --leading-9xl: 2; /* 32px @ 16px font */
+}
