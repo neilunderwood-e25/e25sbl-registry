@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-02-06",
+  "lastUpdated": "2026-02-11",
   "sections": [
     {
       "id": "hero-1",
@@ -14,6 +14,19 @@
         "assets": []
       },
       "preview": "https://e25sbl-registry.vercel.app/preview/hero-1"
+    },
+    {
+      "id": "logo-carousel",
+      "name": "Logo Carousel",
+      "description": "Logo carousel section for displaying client/partner logos",
+      "category": "branding",
+      "tags": ["logos", "carousel", "clients", "partners"],
+      "hasAssets": false,
+      "files": {
+        "component": "sections/logo-carousel.tsx",
+        "assets": []
+      },
+      "preview": "https://e25sbl-registry.vercel.app/preview/logo-carousel"
     }
   ]
 }
