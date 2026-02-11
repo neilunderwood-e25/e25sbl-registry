@@ -1,36 +1,138 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# E25 Section Library Registry
 
-## Getting Started
+Component registry for [@neilunderwood/e25sbl](https://www.npmjs.com/package/@neilunderwood/e25sbl) CLI.
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+This Next.js project serves as the registry for all website sections that can be installed via the `@neilunderwood/e25sbl` CLI. It includes:
+
+- **Component Source Files**: Real Next.js components in `/sections`
+- **Registry Metadata**: Section catalog in `/registry`
+- **Preview Pages**: Live previews at `/preview/[section-id]`
+- **Storybook**: Interactive component explorer (coming soon)
+
+## Project Structure
+
+```
+e25sbl-registry/
+├── sections/              # Component source files (CLI fetches from here)
+│   └── hero-1.tsx
+├── registry/
+│   ├── registry.json     # Main registry index
+│   └── metadata/         # Detailed metadata per section
+│       └── hero-1.json
+├── app/
+│   ├── page.tsx          # Homepage: Browse all sections
+│   └── preview/
+│       └── [id]/         # Preview pages for each section
+├── public/
+│   └── assets/           # Section assets (images, etc.)
+└── stories/              # Storybook stories (coming soon)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node.js 18+
+- npm or yarn
 
-## Learn More
+### Setup
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# Install dependencies
+npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Run development server
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Visit http://localhost:3000 to see the registry homepage.
 
-## Deploy on Vercel
+### Adding a New Section
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Create component** in `sections/your-section.tsx`:
+   ```tsx
+   export default function YourSection() {
+     return <section>{/* ... */}</section>
+   }
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **Add preview page** at `app/preview/your-section/page.tsx`:
+   ```tsx
+   import YourSection from "@/sections/your-section";
+   export default function Preview() {
+     return <YourSection />;
+   }
+   ```
+
+3. **Update registry** in `registry/registry.json`:
+   ```json
+   {
+     "id": "your-section",
+     "name": "Your Section",
+     "description": "...",
+     "category": "heroes",
+     "tags": ["hero"],
+     "hasAssets": false,
+     "files": {
+       "component": "sections/your-section.tsx",
+       "assets": []
+     }
+   }
+   ```
+
+4. **Create metadata** in `registry/metadata/your-section.json`
+
+5. **Test locally**:
+   - Preview at http://localhost:3000/preview/your-section
+   - Check homepage lists the new section
+
+6. **Commit and push** - changes go live immediately!
+
+### Adding Assets
+
+If your section needs images/assets:
+
+1. Create folder: `public/assets/your-section/`
+2. Add assets: `public/assets/your-section/image.jpg`
+3. Reference in component: `<img src="/assets/your-section/image.jpg" />`
+4. Update `registry.json` with `"hasAssets": true`
+5. List files in `assets` array
+
+## Deployment
+
+This project auto-deploys to Vercel on every push to `main`.
+
+- **Live Site**: https://e25sbl-registry.vercel.app
+- **Registry API**: Raw files fetched from GitHub
+
+## CLI Integration
+
+The `@neilunderwood/e25sbl` CLI fetches components from this repository via GitHub raw URLs:
+
+```
+https://raw.githubusercontent.com/YOUR-USERNAME/e25sbl-registry/main/sections/hero-1.tsx
+```
+
+When users run:
+```bash
+npx @neilunderwood/e25sbl hero-1
+```
+
+The CLI:
+1. Fetches `registry.json` to find the section
+2. Downloads component from GitHub
+3. Downloads assets (if any)
+4. Installs to user's project
+
+## Contributing
+
+1. Fork this repository
+2. Create a new section following the guide above
+3. Test locally
+4. Submit a pull request
+
+## License
+
+MIT
