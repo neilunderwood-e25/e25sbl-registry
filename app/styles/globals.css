@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@import "./_fonts.css";
+@import "./_typogrphy.css";
 @import "./_common.css";
 
 @theme inline {
@@ -112,17 +114,4 @@
   --color-hero-1-link: #111827; /* gray-900 */
   --color-hero-1-link-hover: #374151; /* gray-700 */
   --color-hero-1-btn-text: #ffffff;
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-marquee {
-  animation: marquee 30s linear infinite;
 }

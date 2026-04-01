@@ -1,0 +1,44 @@
+/* ==========================================================================
+   Font Face Declarations — Cabinet Grotesk
+   Fonts served from /public/fonts/
+   ========================================================================== */
+
+@font-face {
+  font-display: swap;
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 200;
+  src:
+    url("/fonts/CabinetGrotesk-Extralight.woff2") format("woff2"),
+    url("/fonts/CabinetGrotesk-Extralight.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 300;
+  src:
+    url("/fonts/CabinetGrotesk-Light.woff2") format("woff2"),
+    url("/fonts/CabinetGrotesk-Light.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("/fonts/CabinetGrotesk-Regular.woff2") format("woff2"),
+    url("/fonts/CabinetGrotesk-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url("/fonts/CabinetGrotesk-Bold.woff2") format("woff2"),
+    url("/fonts/CabinetGrotesk-Bold.woff") format("woff");
+}

@@ -2,9 +2,12 @@
 
 import Link from "next/link";
 import registry from "@/registry/registry.json";
+import HeroSection from "@/components/blocks/heroSection";
 
 export default function Home() {
   return (
+    <>
+    <HeroSection />
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <div className="flex justify-end mb-8">
@@ -83,5 +86,6 @@ export default function Home() {
         </div>
       </div>
     </div>
+    </>
   );
 }
